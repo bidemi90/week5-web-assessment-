@@ -37,14 +37,37 @@
 
 
 // this is for week 6 Calculator
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import Calculator from './SimpleCalculator';
+// import React from 'react';
+// import ReactDOM from 'react-dom/client';
+// import './index.css';
+// import Calculator from './SimpleCalculator';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(
+//   <React.StrictMode>
+//     <Calculator />
+//   </React.StrictMode>
+// );
+
+
+// src/index.js for week7
+import React from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import "./App.css";
+import Hook_ControlledButtonState from "./Counter";
+import EmojeeCounter from "./EmojeeCounters";
+import TextToEmoji from "./TextToEmoji";
+
+const container = document.getElementById("root");
+const root = createRoot(container);
+
 root.render(
   <React.StrictMode>
-    <Calculator />
+    <Hook_ControlledButtonState />
+    <EmojeeCounter pic="Love" />
+    <EmojeeCounter pic="sad" />
+    <EmojeeCounter pic="Like" />
+    <TextToEmoji />
   </React.StrictMode>
 );
