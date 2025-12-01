@@ -35,7 +35,6 @@
 // // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 // reportWebVitals();
 
-
 // this is for week 6 Calculator
 // import React from 'react';
 // import ReactDOM from 'react-dom/client';
@@ -49,25 +48,50 @@
 //   </React.StrictMode>
 // );
 
-
 // src/index.js for week7
+// import React from "react";
+// import { createRoot } from "react-dom/client";
+// import "./index.css";
+// import "./App.css";
+// import Hook_ControlledButtonState from "./Counter";
+// import EmojeeCounter from "./EmojeeCounters";
+// import TextToEmoji from "./TextToEmoji";
+
+// const container = document.getElementById("root");
+// const root = createRoot(container);
+
+// root.render(
+//   <React.StrictMode>
+//     <Hook_ControlledButtonState />
+//     <EmojeeCounter pic="Love" />
+//     <EmojeeCounter pic="sad" />
+//     <EmojeeCounter pic="Like" />
+//     <TextToEmoji />
+//   </React.StrictMode>
+// );
+
+// this is for week 9
 import React from "react";
-import { createRoot } from "react-dom/client";
+import ReactDOM from "react-dom/client";
 import "./index.css";
-import "./App.css";
-import Hook_ControlledButtonState from "./Counter";
-import EmojeeCounter from "./EmojeeCounters";
-import TextToEmoji from "./TextToEmoji";
+import App from "./App";
+import "./index.css";
+import FacebookEmojiCounter from "./Facebookemoji";
+import ToggleMode from "./ToggleModeComponent";
 
-const container = document.getElementById("root");
-const root = createRoot(container);
-
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Hook_ControlledButtonState />
-    <EmojeeCounter pic="Love" />
-    <EmojeeCounter pic="sad" />
-    <EmojeeCounter pic="Like" />
-    <TextToEmoji />
+    <App />
+    <FacebookEmojiCounter type="Like" />
+    <FacebookEmojiCounter type="Love" />
+    <FacebookEmojiCounter type="happy" />
+      <FacebookEmojiCounter type="Like" />
+    <FacebookEmojiCounter type="Love" />
+    <ToggleMode />
   </React.StrictMode>
+  // <React.Fragment>
+
+  // </React.Fragment>,
 );
+
